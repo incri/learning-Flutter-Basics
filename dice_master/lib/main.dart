@@ -9,7 +9,11 @@ class DiceMaster extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: GradientContainer()),
+      home: Scaffold(
+          body: GradientContainer(
+        Color.fromARGB(223, 203, 201, 204),
+        Color.fromARGB(255, 194, 194, 248),
+      )),
     );
   }
 }

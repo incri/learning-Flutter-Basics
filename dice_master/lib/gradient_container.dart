@@ -1,18 +1,21 @@
-import 'package:dice_master/text_style_container.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-        Color.fromARGB(223, 203, 201, 204),
-        Color.fromARGB(255, 194, 194, 248),
-      ])),
-      child: const Center(child: TextStyleContainer('Hello Baibhav')),
+      decoration:
+          BoxDecoration(gradient: LinearGradient(colors: [color1, color2])),
+      child: Center(
+          child: Image.asset(
+        'assets/images/dice-1.png',
+        width: 200,
+      )),
     );
   }
 }
