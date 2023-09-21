@@ -13,7 +13,13 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget activeScreen = const StartScreen('Play Quiz');
+  Widget? activeScreen;
+  @override
+  void initState() {
+    activeScreen = StartScreen('Play Quiz', switchScreen);
+
+    super.initState();
+  }
 
   void switchScreen() {
     setState(() {
@@ -29,7 +35,7 @@ class _QuizState extends State<Quiz> {
         body: GradientContainer(
           const Color.fromARGB(255, 6, 218, 255),
           const Color.fromARGB(31, 10, 255, 243),
-          child: activeScreen,
+          child: activeScreen!,
         ),
       ),
     );
