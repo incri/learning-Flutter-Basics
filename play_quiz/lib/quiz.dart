@@ -33,7 +33,7 @@ class _QuizState extends State<Quiz> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GradientContainer(
-          const Color.fromARGB(255, 6, 218, 255),
+          const Color.fromARGB(255, 241, 235, 177),
           const Color.fromARGB(31, 10, 255, 243),
           child: activeScreen!,
         ),
