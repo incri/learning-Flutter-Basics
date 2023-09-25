@@ -15,7 +15,7 @@ class Homepage extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 209, 227, 243)),
-              height: 180,
+              height: 150,
               child: const NavBar(),
             ),
             Container(
